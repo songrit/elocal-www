@@ -18,7 +18,7 @@ unless User.find_by_login "admin"
   User.create! :login=> "admin", 
     :password=> "aa", 
     :email=> "songrit@gmail.com", 
-    :title=> "นาย", :fname=> "ทรงฤทธิ์", :lname=> "ลีมัคเดช", 
+    :title=> "นาย", :fname=> "system", :lname=> "admin", 
     :role=> "M,A,D", 
     :cellphone=> "0837887769"
 end
