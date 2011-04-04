@@ -1,6 +1,6 @@
 <map version="0.9.0">
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
-<node CREATED="1273819432637" ID="ID_1098419600" MODIFIED="1279699253278" TEXT="elocal">
+<node CREATED="1273819432637" ID="ID_1098419600" MODIFIED="1301903314905" TEXT="elocal-www">
 <node CREATED="1273819462973" ID="ID_282419531" MODIFIED="1298456465253" POSITION="right" TEXT="services">
 <node CREATED="1301891097947" ID="ID_761518074" MODIFIED="1301891468875" TEXT="about: &#xe02;&#xe49;&#xe2d;&#xe21;&#xe39;&#xe25;&#xe17;&#xe31;&#xe48;&#xe27;&#xe44;&#xe1b;">
 <node CREATED="1301891109805" ID="ID_1520884593" MODIFIED="1301891155058" TEXT="link: &#xe1b;&#xe23;&#xe30;&#xe27;&#xe31;&#xe15;&#xe34;&#xe04;&#xe27;&#xe32;&#xe21;&#xe40;&#xe1b;&#xe47;&#xe19;&#xe21;&#xe32;: /about/history"/>
@@ -11,7 +11,7 @@
 <node CREATED="1301894887342" ID="ID_1529455819" MODIFIED="1301894896595" TEXT="webboard: &#xe01;&#xe23;&#xe30;&#xe14;&#xe32;&#xe19;&#xe2a;&#xe19;&#xe17;&#xe19;&#xe32;"/>
 <node CREATED="1301894908383" ID="ID_1108964665" MODIFIED="1301895289553" TEXT="meeting: &#xe23;&#xe32;&#xe22;&#xe07;&#xe32;&#xe19;&#xe01;&#xe32;&#xe23;&#xe1b;&#xe23;&#xe30;&#xe0a;&#xe38;&#xe21;"/>
 <node CREATED="1301895052718" ID="ID_253411513" MODIFIED="1301895059284" TEXT="ws"/>
-<node CREATED="1275756501221" FOLDED="true" ID="ID_1720745721" MODIFIED="1301891091144" TEXT="account:&#xe1c;&#xe39;&#xe49;&#xe43;&#xe0a;&#xe49;">
+<node CREATED="1275756501221" ID="ID_1720745721" MODIFIED="1301903112310" TEXT="account:&#xe1c;&#xe39;&#xe49;&#xe43;&#xe0a;&#xe49;">
 <node CREATED="1278491598711" ID="ID_1662699954" MODIFIED="1278491602025" TEXT="role:m"/>
 <node CREATED="1279700865182" ID="ID_1266797279" MODIFIED="1282824456921" TEXT="link:&#xe02;&#xe49;&#xe2d;&#xe21;&#xe39;&#xe25;&#xe1c;&#xe39;&#xe49;&#xe43;&#xe0a;&#xe49;: /account"/>
 <node CREATED="1275905802131" ID="ID_154000410" MODIFIED="1297107050790" TEXT="user:&#xe41;&#xe01;&#xe49;&#xe44;&#xe02;&#xe02;&#xe49;&#xe2d;&#xe21;&#xe39;&#xe25;&#xe1c;&#xe39;&#xe49;&#xe43;&#xe0a;&#xe49;">
