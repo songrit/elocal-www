@@ -4,6 +4,7 @@ source "http://gems.github.com"
 
 gem "rails", "2.3.5"
 gem "rest-open-uri"
+gem "linguistics"
 gem "heroku"
 gem "taps", "0.3.14"
 gem 'pg', "0.9.0"

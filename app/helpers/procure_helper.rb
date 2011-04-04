@@ -1,0 +1,2 @@
+module ProcureHelper
+end

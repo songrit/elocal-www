@@ -1,0 +1,2 @@
+class WebboardController < ApplicationController
+end

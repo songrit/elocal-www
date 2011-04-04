@@ -1,4 +1,4 @@
-class AddGmaTables < ActiveRecord::Migration
+class CreateGmaTables < ActiveRecord::Migration
   def self.up
 
     create_table "gma_docs", :force => true do |t|
@@ -11,6 +11,8 @@ class AddGmaTables < ActiveRecord::Migration
       t.integer  "gma_user_id"
       t.integer  "gma_service_id"
       t.text     "ip"
+      t.boolean  "display"
+      t.boolean  "secured", :default=>false
       t.datetime "created_at"
       t.datetime "updated_at"
     end
@@ -71,7 +73,7 @@ class AddGmaTables < ActiveRecord::Migration
       t.string   "role"
       t.string   "rule"
       t.integer  "gma_xmain_id"
-      t.integer  "rstep"
+      t.integer  "step"
       t.integer  "form_step"
       t.datetime "start"
       t.datetime "stop"
@@ -90,8 +92,11 @@ class AddGmaTables < ActiveRecord::Migration
       t.integer  "gma_module_id"
       t.text     "xml"
       t.string   "auth"
+      t.string   "role"
+      t.string   "rule"
       t.integer  "seq"
       t.boolean  "listed"
+      t.boolean  "secured"
       t.integer  "gma_user_id"
       t.datetime "created_at"
       t.datetime "updated_at"
@@ -183,7 +188,6 @@ class AddGmaTables < ActiveRecord::Migration
     add_index :gma_runseqs, :gma_xmain_id
     add_index :gma_services, :gma_module_id
     add_index :gma_songrits, :code
-    add_index :gma_users, :section_id
   end
 
   def self.down

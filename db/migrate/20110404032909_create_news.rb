@@ -1,6 +1,6 @@
 class CreateNews < ActiveRecord::Migration
   def self.up
-    create_table :news do |t|
+    create_table :news, :force=>true do |t|
       t.string :subject
       t.text :body
       t.boolean :stick

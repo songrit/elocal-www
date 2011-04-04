@@ -1,37 +1,12 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
   require "fusion_charts_helper"
-  include FusionChartsHelper
 
-  def palad
-    User.find PALAD
-  end
-  def income_summary_maker
-    User.find INCOME_SUMMARY_MAKER
-  end
-  #------------------------
-  def leave_options
-    [["ลาป่วย",1],["ลาคลอดบุตร",2],["ลากิจ",3],
-      ["ลาพักผ่อน",4], ["ลาอุปสมบท",5], ["ลาราชการทหาร",6],
-      ["ลาศึกษาต่อ",7], ["ลาองค์กรระหว่างประเทศ",8], ["ลาติดตามคู่สมรส",9],
-      ["มาสาย",10], ["ขาดราชการ",11] ]
-  end
   def province_prefix(province_id)
     return province_id==1 ? "" : "จังหวัด"
   end
   def district_prefix(province_id)
     return province_id==1 ? "" : "อำเภอ"
-  end
-  def underprivileged(u)
-    case u
-    when 1
-      img= "seniors16.png"
-    when 2
-      img= "handicap16.png"
-    when 3
-      img= "aids16.png"
-    end
-    image_tag img
   end
   def sex_img(title)
     return title=="นาย" ? "male.png" : "female.png"

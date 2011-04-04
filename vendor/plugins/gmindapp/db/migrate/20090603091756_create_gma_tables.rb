@@ -1,4 +1,4 @@
-class AddGmaTables < ActiveRecord::Migration
+class CreateGmaTables < ActiveRecord::Migration
   def self.up
 
     create_table "gma_docs", :force => true do |t|
@@ -188,7 +188,6 @@ class AddGmaTables < ActiveRecord::Migration
     add_index :gma_runseqs, :gma_xmain_id
     add_index :gma_services, :gma_module_id
     add_index :gma_songrits, :code
-    add_index :gma_users, :section_id
   end
 
   def self.down
