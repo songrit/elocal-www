@@ -6,6 +6,7 @@ Rails::Initializer.run do |config|
   config.time_zone = 'Bangkok'
   config.active_record.default_timezone = "Bangkok"
   THAI_MONTHS = %w(มกราคม กุมภาพันธ์ มีนาคม เมษายน พฤษภาคม มิถุนายน กรกฎาคม สิงหาคม กันยายน ตุลาคม พฤศจิกายน ธันวาคม)
+  APP_NAME = "elocal-www"
   APP_VERSION = '0.1'
   config.action_controller.session_store = :active_record_store
   IMAGE_LOCATION = "doc/upload"

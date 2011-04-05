@@ -110,5 +110,5 @@ DEPENDENCIES
   ruby-debug (= 0.10.4)
   rubyzip
   syntax
-  taps (= 0.3.14)
+  taps
   will_paginate

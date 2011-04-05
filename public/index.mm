@@ -5,6 +5,7 @@
 <node CREATED="1301891097947" ID="ID_761518074" MODIFIED="1301891468875" TEXT="about: &#xe02;&#xe49;&#xe2d;&#xe21;&#xe39;&#xe25;&#xe17;&#xe31;&#xe48;&#xe27;&#xe44;&#xe1b;">
 <node CREATED="1301891109805" ID="ID_1520884593" MODIFIED="1301891155058" TEXT="link: &#xe1b;&#xe23;&#xe30;&#xe27;&#xe31;&#xe15;&#xe34;&#xe04;&#xe27;&#xe32;&#xe21;&#xe40;&#xe1b;&#xe47;&#xe19;&#xe21;&#xe32;: /about/history"/>
 <node CREATED="1301991877388" ID="ID_1061542823" MODIFIED="1301991901325" TEXT="link: &#xe1a;&#xe38;&#xe04;&#xe25;&#xe32;&#xe01;&#xe23;: /about/executives"/>
+<node CREATED="1301998435215" ID="ID_1811221797" MODIFIED="1301998445646" TEXT="link: &#xe15;&#xe34;&#xe14;&#xe15;&#xe48;&#xe2d;&#xe40;&#xe23;&#xe32;: /about/contact"/>
 </node>
 <node CREATED="1301894828778" ID="ID_1136218227" MODIFIED="1301895243432" TEXT="activity: &#xe02;&#xe48;&#xe32;&#xe27; &#xe01;&#xe34;&#xe08;&#xe01;&#xe23;&#xe23;&#xe21;"/>
 <node CREATED="1301894853343" ID="ID_251598809" MODIFIED="1301895247248" TEXT="procure: &#xe08;&#xe31;&#xe14;&#xe0b;&#xe37;&#xe49;&#xe2d;&#xe08;&#xe31;&#xe14;&#xe08;&#xe49;&#xe32;&#xe07;"/>
