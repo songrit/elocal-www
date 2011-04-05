@@ -35,9 +35,10 @@
 <node CREATED="1276062721100" ID="ID_1806588076" MODIFIED="1276062727685" TEXT="rule: login?"/>
 </node>
 </node>
-<node CREATED="1275752678377" FOLDED="true" ID="ID_1348489452" MODIFIED="1301891094531" TEXT="admin:&#xe1c;&#xe39;&#xe49;&#xe14;&#xe39;&#xe41;&#xe25;&#xe23;&#xe30;&#xe1a;&#xe1a;">
+<node CREATED="1275752678377" ID="ID_1348489452" MODIFIED="1301957683678" TEXT="admin:&#xe1c;&#xe39;&#xe49;&#xe14;&#xe39;&#xe41;&#xe25;&#xe23;&#xe30;&#xe1a;&#xe1a;">
 <node CREATED="1275752688167" ID="ID_229996461" MODIFIED="1275752690948" TEXT="role:a"/>
 <node CREATED="1280374214975" ID="ID_980297856" MODIFIED="1280374230097" TEXT="link: &#xe23;&#xe32;&#xe22;&#xe0a;&#xe37;&#xe48;&#xe2d;&#xe1c;&#xe39;&#xe49;&#xe43;&#xe0a;&#xe49;: /admin/users"/>
+<node CREATED="1301957689961" ID="ID_930297740" MODIFIED="1301957727907" TEXT="link: &#xe41;&#xe2a;&#xe14;&#xe07; ip &#xe40;&#xe04;&#xe23;&#xe37;&#xe48;&#xe2d;&#xe07;&#xe2d;&#xe34;&#xe19;&#xe17;&#xe23;&#xe32;&#xe40;&#xe19;&#xe47;&#xe15;:/admin/display_intranet"/>
 <node CREATED="1280601992129" ID="ID_149279552" MODIFIED="1280602017663" TEXT="edit_org: &#xe41;&#xe01;&#xe49;&#xe44;&#xe02;&#xe02;&#xe49;&#xe2d;&#xe21;&#xe39;&#xe25; &#xe2d;&#xe1b;&#xe17;.">
 <node CREATED="1280602020164" ID="ID_638196162" MODIFIED="1280602064881" TEXT="edit: &#xe41;&#xe01;&#xe49;&#xe44;&#xe02;&#xe02;&#xe49;&#xe2d;&#xe21;&#xe39;&#xe25;">
 <icon BUILTIN="attach"/>

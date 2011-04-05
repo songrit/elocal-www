@@ -3,6 +3,11 @@ module Gma
   include ActionView::Helpers::DateHelper
   include ActionView::Helpers::TextHelper
 
+  def ping(server)
+    ping_count = 3
+    result = `ping -q -c #{ping_count} #{server}`
+    $?.exitstatus == 0
+  end
   def admin_action
 #    flash[:notice]= "admin only"
     redirect_to "/" unless admin?

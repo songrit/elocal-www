@@ -18,6 +18,19 @@ class ApplicationController < ActionController::Base
     current_user.role && current_user.role.upcase.split(',').include?('CO') && current_user.section_id==1
   end
 #----------------------
+  def store_asset(options={:content=>''})
+    server = options[:server] || songrit(:intranet)
+    result= RestClient.post "http://#{server}/main/store_asset",
+      :file_name => (params[:file_name]||''),
+      :content => params[:content],
+      :content_type => (params[:content_type]||'')
+    doc = Nokogiri::XML(result||'')
+    unless doc.xpath("//success").empty?
+      doc.xpath("//doc").attribute("id").value
+    else
+      false
+    end
+  end
   def atype(a)
     ACCOUNT_TYPE[a-1]
   end

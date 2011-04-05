@@ -8,6 +8,7 @@ gem "linguistics"
 gem "heroku"
 gem "nokogiri"
 gem "taps", "0.3.14"
+gem "hoptoad_notifier" # use by taps
 gem 'pg', "0.9.0"
 gem "will_paginate"
 gem "RedCloth"
@@ -21,4 +22,5 @@ group :development do
   gem "ruby-debug", "0.10.4", :platform=>:ruby
   gem "rails-footnotes"
   gem "rspec-rails", "1.3.3"
+  gem "syntax"
 end

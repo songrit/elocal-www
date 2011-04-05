@@ -5,9 +5,17 @@ class SongritController < ApplicationController
   require "rest_client"
   require 'nokogiri'
 
-def test
-  render :text => songrit(:intranet_ip)
-end
+  def test_store_asset
+    @doc_id= store_asset(params)
+    render :text => @doc_id ? "ok; #{@doc_id}" : "fail"
+  end
+  def test_ping
+    if (ping params[:server])
+      render :text => "Device is up!"
+    else
+      render :text => "Device is down!"
+    end
+  end
   def test_api
     body= File.open("public/OTA_HotelAvailNotifRQ.xml").read
     f= RestClient.post "http://pob-ws.local/api/hotel_avail_notif", body

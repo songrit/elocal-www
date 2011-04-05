@@ -1,19 +1,15 @@
 class AdminController < ApplicationController
   before_filter :admin_action, :except=>[:daily_housekeeping, :hourly_housekeeping]
 
-  def gen_fsection
-    if Fsection.first :conditions=>"budget!=0 OR balance!=0"
-      flash[:notice]= "งบปัจจุบันไม่เป็นศูนย์ ไม่สามารถสร้างส่วนใหม่ได้"
+  def display_intranet
+    server= songrit(:intranet)
+    if ping(server)
+      result = "เครื่องแม่ข่ายอินทราเน็ตอยู่ที่ #{server}"
     else
-      Fsection.delete_all
-      Fsection.create :id=>0, :code=>"00", :name=>"งบกลาง", :balance=>0, :budget=>0
-      Section.all.each do |s|
-        Fsection.create :id=>s.id, :code=>s.code, :name=>s.name,
-          :balance=>0, :budget=>0
-      end
-      flash[:notice]= "สร้างส่วนสำหรับงบประมาณเรียบร้อยแล้ว"
+      flash[:now]= "ไม่สามารถติดต่อเครื่องอินทราเน็ตได้"
+      result = ""
     end
-    redirect_to "/"
+    render :text => result, :layout => true 
   end
   def update_role
     GmaUser.update $xvars[:select_user][:user_id], :role=>$xvars[:edit_role][:role]
