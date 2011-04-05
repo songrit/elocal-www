@@ -1,30 +1,20 @@
 class UsersController < ApplicationController
-#  require "Gma"
-#  include GmaMethods
   def login
     user= GmaUser.authenticate params[:login], params[:password]
+    session[:module] ||= 'account'
     if user
       session[:user_id]= user.id
       $user_id= user.id
-#      gma_log "LOGIN", "user #{user.login}(#{user.id}) logged in"
     else
       gma_log "SECURITY", "user #{params[:login]} log in failure"
       flash[:notice]= "ขออภัย รหัสไม่ถูกต้อง"
     end
-#    redirect_to_root
     redirect_to request.referrer
   end
   def logout
-#    user= GmaUser.find session[:user_id]
-#    gma_log "LOGOUT", "user #{user.login}(#{user.id}) logged out"
-    session[:user_id]= nil
+    reset_session
     $user_id= anonymous.id
-    if (session[:module] != 'waypoint') && (session[:module] != 'trip')
-      session[:module] = 'waypoint'
-      redirect_to_root
-    else
-      redirect_to request.referrer
-    end
+    redirect_to request.referrer
   end
   def new
     @title= "Register New User"

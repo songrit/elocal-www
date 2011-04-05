@@ -2,6 +2,9 @@ class MainController < ApplicationController
   # require "open-uri"
   # require "hpricot"
 
+  def index
+    render :text => "coming soon ...", :layout => true 
+  end
   def status
     @xmain= GmaXmain.find params[:id]
     @xvars= @xmain.xvars
@@ -14,7 +17,7 @@ class MainController < ApplicationController
   def help
 #    render :text => "help"
   end
-  def index
+  def pending
     # @news = News.all :limit => 5, :order => "created_at DESC"
     @xmains= GmaXmain.all :conditions=>"status='R' or status='I' ", :order=>"created_at", :include=>:gma_runseqs
   end
