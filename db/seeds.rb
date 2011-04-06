@@ -11,7 +11,7 @@ unless Org.exists?
 end
 unless User.find_by_login "anonymous"
   puts "create anonymous user"
-  User.create! :login=> "anonymous"
+  User.create! :login=> "anonymous", :role => "" 
 end
 unless User.find_by_login "admin"
   puts "create admin user"

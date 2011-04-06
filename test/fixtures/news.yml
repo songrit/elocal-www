@@ -4,10 +4,14 @@ one:
   subject: MyString
   body: MyText
   stick: false
+  published_on: 2011-04-05
+  expired_on: 2011-04-05
   gma_user_id: 1
 
 two:
   subject: MyString
   body: MyText
   stick: false
+  published_on: 2011-04-05
+  expired_on: 2011-04-05
   gma_user_id: 1

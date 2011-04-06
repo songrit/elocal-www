@@ -3,7 +3,12 @@ class MainController < ApplicationController
   # require "hpricot"
 
   def index
-    render :text => "coming soon ...", :layout => true 
+    if params[:module]
+      session[:module]= params[:module]
+      redirect_to :controller=>params[:module]
+    else
+      render :text => "coming soon ...", :layout => true 
+    end
   end
   def status
     @xmain= GmaXmain.find params[:id]

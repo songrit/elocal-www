@@ -1,5 +1,6 @@
 <% 
 @org= Org.last
+@title = "#{@org.otype}#{@org.name}"
 @amodules= [] # authorized modules
 @gma_modules= GmaModule.all(:order=>"seq").each do |m|
   if m.role
@@ -42,7 +43,7 @@ end
         <a href="/">
             <%= image_tag 'logo_bangtanai150.png', :style=>'float:left;padding-right:10px;' %>
             <div class="title" style="padding-top:40px; padding-left:180px;">
-              <%= @org.otype %><%= @org.name %>
+              <%= @title %>
           </div>
         </a>
       </div>

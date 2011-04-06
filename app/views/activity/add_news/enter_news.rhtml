@@ -1,0 +1,24 @@
+<% 
+   @news = News.new
+%>
+<table width="100%">
+  <% fields_for @news do |f| %>
+    <tr>
+      <td class="field-name">หัวข้อข่าว</td>
+      <td colspan='2'><%= f.text_field :subject, :style=>"width:300px;" %></td>
+    </tr>
+    <tr>
+      <td class="field-name">รายละเอียด</td>
+      <td colspan='2'><%= f.text_area :body, :cols=>50, :rows=>6 %></td>
+    </tr>
+    <tr>
+      <td class="field-name">วันที่เริ่ม</td>
+      <td colspan="2"><%= f.date_select_year :published_on, :start_year=>Time.now.year %></td>
+    </tr>
+    <tr>
+      <td class="field-name">วันที่สิ้นสุด</td>
+      <td colspan="2"><%= f.date_select_year :expired_on, :start_year=> Time.now.year %></td>
+    </tr>
+  <% end %>
+</table>
+<%= fix_thai_year %>

@@ -4,6 +4,8 @@ class CreateNews < ActiveRecord::Migration
       t.string :subject
       t.text :body
       t.boolean :stick
+      t.date :published_on
+      t.date :expired_on
       t.integer :gma_user_id
 
       t.timestamps
