@@ -12,4 +12,6 @@ Rails::Initializer.run do |config|
   IMAGE_LOCATION = "doc/upload"
   CDN = false
   GMAP = false
+  # disable Rails to add timestamp at end of image cause problem in heroku
+  ENV["RAILS_ASSET_ID"] = ""
 end
