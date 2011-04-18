@@ -4,7 +4,7 @@ module ApplicationHelper
     POST_TYPE[i-1]
   end
   def pic_location(s)
-    @ping ||= ping(songrit(:intranet))
+    @ping ||= songrit(:intranet) && ping(songrit(:intranet))
     if @ping
       uri= URI.parse(s)
       uri.host= songrit(:intranet)
