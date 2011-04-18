@@ -8,7 +8,7 @@ module Gma
   end  
 
   def ping(server)
-    ping_count = 3
+    ping_count = 1
     result = `ping -q -c #{ping_count} #{server}`
     $?.exitstatus == 0
   end

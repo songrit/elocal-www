@@ -4,9 +4,14 @@ module ApplicationHelper
     POST_TYPE[i-1]
   end
   def pic_location(s)
-    uri= URI.parse(s)
-    uri.host= songrit(:intranet)
-    uri.to_s
+    @ping ||= ping(songrit(:intranet))
+    if @ping
+      uri= URI.parse(s)
+      uri.host= songrit(:intranet)
+      uri.to_s
+    else
+      ""
+    end
   end
   def province_prefix(province_id)
     return province_id==1 ? "" : "จังหวัด"
