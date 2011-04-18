@@ -6,7 +6,7 @@
     %td
       - @posts.each do |p|
         .news
-        - pp= pic_location(p.pic)
+          - pp= pic_location(p.pic)
           = image_tag pp unless pp.empty?
           %br
           %strong= p.subject
