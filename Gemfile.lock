@@ -75,8 +75,7 @@ GEM
     sqlite3-ruby (1.3.3)
       sqlite3 (>= 1.3.3)
     syntax (1.0.0)
-    taps (0.3.21)
-      activesupport (>= 2.1.0)
+    taps (0.3.23)
       rack (>= 1.0.1)
       rest-client (>= 1.4.0, < 1.7.0)
       sequel (~> 3.20.0)
@@ -109,5 +108,5 @@ DEPENDENCIES
   ruby-debug (= 0.10.4)
   rubyzip
   syntax
-  taps
+  taps (= 0.3.23)
   will_paginate

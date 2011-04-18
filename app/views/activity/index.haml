@@ -1,19 +1,14 @@
 %h4(style='text-align:center;') ข่าว/กิจกรรม
-- if admin?
-  %div(style='float:right')
-    = image_tag 'add.png'
-    = link_to align_text('บันทึกข่าว'), "/run/activity/add_news"
 %table{:class=>'budget_table', :width=>"100%"}
   %tr{:style=>"color:white; background-color:#6A6A6A;"}
-    - if admin?
-      %th{:style=>"width:30px;"} แก้ไข
-      %th{:style=>"width:30px;"} ลบ
+    %th id
     %th วันที่
     %th หัวข้อข่าว
-  - @news.each do |s|
+    %th ประเภท
+  - @posts.each do |p|
     %tr
-      - if admin?
-        %td= link_to image_tag('pencil.png'), "/run/activity/edit_news/#{s.id}"
-        %td= link_to image_tag('cross.png'), "/run/activity/rm_news/#{s.id}", :confirm=>"กรุณายืนยัน"
-      %td= date_thai s.created_at
-      %td= s.subject
+      %td= p.id
+      %td= date_thai p.created_at
+      %td= p.subject
+      %td= post_type(p.post_type)
+      

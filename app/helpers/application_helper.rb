@@ -1,5 +1,13 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
+  def post_type(i)
+    POST_TYPE[i-1]
+  end
+  def pic_location(s)
+    uri= URI.parse(s)
+    uri.host= songrit(:intranet)
+    uri.to_s
+  end
   def province_prefix(province_id)
     return province_id==1 ? "" : "จังหวัด"
   end

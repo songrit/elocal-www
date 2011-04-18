@@ -1,0 +1,13 @@
+:css
+  .news {display:inline-block; width:340px;}
+
+%table(style='width:701px')
+  %tr
+    %td
+      - @posts.each do |p|
+        .news
+          = image_tag pic_location(p.pic) unless p.pic.empty?
+          %br
+          %strong= p.subject
+          %br
+          = p.body

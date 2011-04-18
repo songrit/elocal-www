@@ -7,7 +7,7 @@ gem "rest-open-uri"
 gem "linguistics"
 gem "heroku"
 gem "nokogiri"
-gem "taps"
+gem "taps", "0.3.23"
 gem "hoptoad_notifier" # use by taps
 gem 'pg', "0.9.0"
 gem "will_paginate"

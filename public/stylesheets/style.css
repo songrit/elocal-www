@@ -78,6 +78,10 @@ body {
 }
 
 td.num {text-align:right;}
+td.group {width:100px;font-weight:bold;}
+td.people {text-align:center}
+div.person {display:inline-block}
+
 
 .field-name {
   font-size:1.2em;

@@ -4,6 +4,10 @@
 <table width="100%">
   <% fields_for @news do |f| %>
     <tr>
+      <td class="field-name">type</td>
+      <td colspan='2'><%= f.text_field :subject, :style=>"width:300px;" %></td>
+    </tr>
+    <tr>
       <td class="field-name">หัวข้อข่าว</td>
       <td colspan='2'><%= f.text_field :subject, :style=>"width:300px;" %></td>
     </tr>

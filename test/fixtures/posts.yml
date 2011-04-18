@@ -1,17 +1,23 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
+  intranet_id: 1
   subject: MyString
   body: MyText
   stick: false
-  published_on: 2011-04-05
-  expired_on: 2011-04-05
+  post_type: 1
+  begin_on: 2011-04-16
+  end_on: 2011-04-16
+  pic: MyString
   gma_user_id: 1
 
 two:
+  intranet_id: 1
   subject: MyString
   body: MyText
   stick: false
-  published_on: 2011-04-05
-  expired_on: 2011-04-05
+  post_type: 1
+  begin_on: 2011-04-16
+  end_on: 2011-04-16
+  pic: MyString
   gma_user_id: 1

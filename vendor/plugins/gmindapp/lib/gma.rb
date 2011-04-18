@@ -3,6 +3,10 @@ module Gma
   include ActionView::Helpers::DateHelper
   include ActionView::Helpers::TextHelper
 
+  def local_ip
+    RestClient.get "http://www.whatismyip.com/automation/n09230945.asp"
+  end  
+
   def ping(server)
     ping_count = 3
     result = `ping -q -c #{ping_count} #{server}`
@@ -108,7 +112,7 @@ module Gma
     Digest::SHA1.hexdigest(s)
   end
   def http(href)
-    require 'open-uri'
+    # require 'open-uri'
     if PROXY
       open(href, :proxy=>PROXY).read
     else
@@ -147,9 +151,14 @@ module Gma
       :iparams=>log_params, :controller=>params[:controller], :action=>params[:action]
   end
   def exec_cmd(s)
-    cmd= ExecCmd.new(s)
-    cmd.run
-    cmd.output
+    if win32?
+      "******** You are using WIN32 system, please copy this command and execute in command prompt ********<br/>"+
+      s+"<br/>"+"****************************************************************************************"
+    else
+      cmd= ExecCmd.new(s)
+      cmd.run
+      cmd.output
+    end
   end
   def link_view_mm(msg)
     "<a href='#{root}/Gma/view_mm'>#{msg}</a>"
@@ -159,10 +168,6 @@ module Gma
       File.mtime("#{RAILS_ROOT}/public/#{source}").to_i.to_s rescue ""
     #source << '?' + asset_id
     image_path "../#{source}?#{asset_id}"
-  end
-  def http(href)
-    require 'open-uri'
-    open(href).read
   end
   def date_select_thai(object, method, default= Time.now, disabled=false)
     date_select object, method, :default => default, :use_month_names=>THAI_MONTHS, :order=>[:day, :month, :year], :disabled=>disabled
@@ -212,7 +217,7 @@ module Gma
 #  end
 
   def win32?
-        !(RUBY_PLATFORM =~ /win32/).nil?
+    (RUBY_PLATFORM =~ /linux/).nil?
   end
   def nbsp(n)
     "&nbsp;"*n
@@ -572,7 +577,12 @@ module Gma
   end
   def songrit(k, default='')
     songrit = GmaSongrit.find_by_code(k)
-    songrit= GmaSongrit.create(:code=>k, :value=>default, :gma_user_id=>session[:user]) unless songrit
+    begin
+      gma_user_id= session[:user_id]
+    rescue
+      gma_user_id= nil
+    end
+    songrit= GmaSongrit.create(:code=>k, :value=>default, :gma_user_id=>gma_user_id) unless songrit
     return songrit.value
   end
 end

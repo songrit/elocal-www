@@ -7,7 +7,7 @@ class MainController < ApplicationController
       session[:module]= params[:module]
       redirect_to :controller=>params[:module]
     else
-      render :text => "coming soon ...", :layout => true 
+      @posts= Post.recent
     end
   end
   def status
