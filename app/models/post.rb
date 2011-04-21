@@ -1,3 +1,4 @@
 class Post < ActiveRecord::Base
-  named_scope :recent, :limit => 10, :order => 'begin_on DESC'
+  default_scope :order=>'begin_on DESC'
+  named_scope :recent, :limit => 10
 end

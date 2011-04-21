@@ -23,4 +23,5 @@ group :development do
   gem "rails-footnotes"
   gem "rspec-rails", "1.3.3"
   gem "syntax"
+  gem "hirb-unicode"
 end

@@ -1,14 +1,20 @@
 :css
-  .news {display:inline-block; width:340px;}
+  .news {display:inline-block; width:340px; vertical-align:top;}
+  .date {font-size:12pt; font-style: italic;}
+  .more {display:inline; float:right; margin-right:20px;}
 
 %table(style='width:701px')
   %tr
     %td
       - @posts.each do |p|
         .news
-          - pp= pic_location(p.pic)
+          - pp= p.pic_postimg
           = image_tag pp unless pp.empty?
           %br
           %strong= p.subject
           %br
-          = p.body
+          = truncate p.body, :length=>200
+          .date
+            = date_thai p.created_at
+            - if p.body.length >200
+              %span.more= link_to 'อ่านต่อ...', :controller=>'activity', :action=>:more, :id=>p.id

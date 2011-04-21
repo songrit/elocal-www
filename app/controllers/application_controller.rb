@@ -2,7 +2,7 @@ class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   helper_method :fiscal_year, :finance_office?, :office_office?,
     :own_xmain?, :mobile_device?, :atype, :b, :end_of_last_month,
-    :begin_of_last_month, :begin_of_fiscal_year
+    :begin_of_last_month, :begin_of_fiscal_year, :post_type
 
   # protect_from_forgery # See ActionController::RequestForgeryProtection for details
   #
@@ -18,6 +18,9 @@ class ApplicationController < ActionController::Base
     current_user.role && current_user.role.upcase.split(',').include?('CO') && current_user.section_id==1
   end
 #----------------------
+  def post_type(i)
+    POST_TYPE[i-1]
+  end
   def store_asset(options={:content=>''})
     server = options[:server] || songrit(:intranet)
     result= RestClient.post "http://#{server}/main/store_asset",
