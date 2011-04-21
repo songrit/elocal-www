@@ -8,7 +8,7 @@ class ActivityController < ApplicationController
       @title= post_type(params[:type].to_i)
     end
   end
-  def more
+  def post
     @post= Post.find params[:id]
   end
 end

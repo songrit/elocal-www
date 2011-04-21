@@ -1,14 +1,16 @@
+:css
+  .subject {width:60%;}
 %h4(style='text-align:center;')= @title
 %table{:class=>'budget_table', :width=>"100%"}
   %tr{:style=>"color:white; background-color:#6A6A6A;"}
     %th id
     %th วันที่
-    %th หัวข้อ
+    %th.subject หัวข้อ
     %th ประเภท
   - @posts.each do |p|
     %tr
       %td= p.id
       %td= date_thai p.created_at
-      %td= p.subject
+      %td= link_to p.subject, :action=>:post, :id=> p.id
       %td= post_type(p.post_type)
       

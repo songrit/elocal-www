@@ -7,7 +7,7 @@ describe ActivityController do
     Post.stub(:find).and_return(@post)
   end
   it "can read more" do
-    get :more, :id=>1
-    response.should be_success
+    get :post, :id=>1
+    response.should have_text @post.body
   end
 end

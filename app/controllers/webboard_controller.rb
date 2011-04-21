@@ -1,5 +1,5 @@
 class WebboardController < ApplicationController
   def index
-    render :text => "coming soon ...", :layout => true 
+    redirect_to :controller => "main", :action => "coming_soon"
   end
 end

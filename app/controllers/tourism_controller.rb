@@ -1,5 +1,5 @@
 class TourismController < ApplicationController
   def index
-    render :text => "coming soon ...", :layout => true 
+    redirect_to :controller => "activity", :type => 4
   end
 end

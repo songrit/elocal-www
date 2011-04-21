@@ -1,0 +1,13 @@
+:css
+  .subject {color:#888; font-size:24pt; font-weight:bold;}
+  .date {font-size:12pt; font-style: italic; float:right; clear: both;}
+- pp= @post.pic_postimg
+= image_tag pp unless pp.empty?
+%br
+.subject= @post.subject
+%p
+= RedCloth.new(@post.body).to_html
+%p
+.date
+  = "(#{@post.post_type_name})"
+  = date_thai @post.created_at

@@ -2,6 +2,8 @@
   .news {display:inline-block; width:340px; vertical-align:top;}
   .date {font-size:12pt; font-style: italic;}
   .more {display:inline; float:right; margin-right:20px;}
+  .subject {font-weight: bold; padding-left:5px;}
+  .body {padding: 5px;}
 
 %table(style='width:701px')
   %tr
@@ -11,10 +13,11 @@
           - pp= p.pic_postimg
           = image_tag pp unless pp.empty?
           %br
-          %strong= p.subject
-          %br
-          = truncate p.body, :length=>200
+          .subject= p.subject
+          .body{:style=>"background-color: #{cycle('#F9E3A4','#F9A4AA','#F9A4EB','#ABA4F9','#A4ECF9','#A6F9A4')}"}
+            = truncate p.body, :length=>200
           .date
+            = "(#{p.post_type_name})"
             = date_thai p.created_at
             - if p.body.length >200
-              %span.more= link_to 'อ่านต่อ...', :controller=>'activity', :action=>:more, :id=>p.id
+              %span.more= link_to 'อ่านต่อ...', :controller=>'activity', :action=>:post, :id=>p.id

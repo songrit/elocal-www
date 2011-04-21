@@ -1,5 +1,5 @@
 class ProcureController < ApplicationController
   def index
-    render :text => "coming soon ...", :layout => true 
+    redirect_to :controller => "activity", :type => 7
   end
 end

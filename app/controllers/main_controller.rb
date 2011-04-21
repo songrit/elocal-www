@@ -7,8 +7,10 @@ class MainController < ApplicationController
       session[:module]= params[:module]
       redirect_to :controller=>params[:module]
     else
-      @posts= Post.recent
+      @posts= Post.recent :order=>'updated_at DESC'
     end
+  end
+  def coming_soon
   end
   def status
     @xmain= GmaXmain.find params[:id]
