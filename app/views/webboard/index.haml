@@ -1,0 +1,20 @@
+:css
+  .subject {width:60%;}
+%h4(style='text-align:center;')= @title
+%table{:class=>'budget_table', :width=>"100%"}
+  %tr{:style=>"color:white; background-color:#6A6A6A;"}
+    - if admin?
+      %th{:style=>"width:30px;"} ลบ
+    %th id
+    %th วันที่
+    %th.subject หัวข้อ
+  - @notices.each do |p|
+    %tr
+      - if admin?
+        %td= link_to image_tag('cross.png'), |
+          "/run/webboard/rm/#{p.id}?return=/webboard", |
+          :confirm=>"กรุณายืนยัน" |
+      %td= p.id
+      %td= date_thai p.created_at
+      %td{:style=>'width:65%;padding-left:10px;'}
+        = link_to p.subject, :action=>:show, :id=> p.id
