@@ -11,7 +11,8 @@ Rails::Initializer.run do |config|
   APP_VERSION = '0.1'
   config.action_controller.session_store = :active_record_store
   POST_TYPE = %w(ข่าว กิจกรรม รายงานการประชุม ท่องเที่ยว ประกาศ คำสั่ง จัดซื้อจัดจ้าง)
-  IMAGE_LOCATION = "doc/upload"
+  # IMAGE_LOCATION = "doc/upload"
+  IMAGE_LOCATION = "tmp"
   CDN = false
   GMAP = false
   # disable Rails to add timestamp at end of image cause problem in heroku

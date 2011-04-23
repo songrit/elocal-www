@@ -12,6 +12,7 @@ gem "hoptoad_notifier" # use by taps
 gem 'pg', "0.9.0"
 gem "will_paginate"
 gem "RedCloth"
+gem "mechanize"
 gem "rmagick", "2.12.0", :require => "RMagick"
 gem "geokit"
 gem 'rubyzip', :require => 'zip/zip'

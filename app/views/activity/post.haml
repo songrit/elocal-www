@@ -8,10 +8,10 @@
 .subject= @post.subject
 %p
 = RedCloth.new(@post.body).to_html
+- unless @post.video.empty?
+  %p
+  #embed_video= @post.video
 %p
 .date
   = "(#{@post.post_type_name})"
   = date_thai @post.created_at
-- unless @post.video.empty?
-  %p
-  #embed_video= @post.video

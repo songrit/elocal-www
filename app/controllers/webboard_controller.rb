@@ -3,6 +3,9 @@ class WebboardController < ApplicationController
     # redirect_to :controller => "main", :action => "coming_soon"
     @notices= Notice.paginate :per_page => 20, :page => params[:page] 
   end
+  def show
+    @notice= Notice.find params[:id]
+  end
   def create_notice
     notice= Notice.new $xvars[:enter][:notice]
     img= $xvars[:enter][:notice_pic_doc_id]
