@@ -3,12 +3,17 @@
 %h4(style='text-align:center;')= @title
 %table{:class=>'budget_table', :width=>"100%"}
   %tr{:style=>"color:white; background-color:#6A6A6A;"}
+    - if admin?
+      %th{:style=>"width:30px;"} ลบ
     %th id
     %th วันที่
     %th.subject หัวข้อ
     %th ประเภท
   - @posts.each do |p|
     %tr
+      %td= link_to image_tag('cross.png'), |
+        "/run/activity/rm/#{p.id}?return=/activity%3Ftype=#{params[:type]}", |
+        :confirm=>"กรุณายืนยัน" |
       %td= p.id
       %td= date_thai p.created_at
       %td= link_to p.subject, :action=>:post, :id=> p.id

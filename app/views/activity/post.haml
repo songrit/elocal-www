@@ -1,4 +1,5 @@
 :css
+  #embed_video {text-align: center;}
   .subject {color:#888; font-size:24pt; font-weight:bold;}
   .date {font-size:12pt; font-style: italic; float:right; clear: both;}
 - pp= @post.pic_postimg
@@ -11,3 +12,6 @@
 .date
   = "(#{@post.post_type_name})"
   = date_thai @post.created_at
+- unless @post.video.empty?
+  %p
+  #embed_video= @post.video

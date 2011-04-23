@@ -13,7 +13,9 @@
           - pp= p.pic_postimg
           = image_tag pp unless pp.empty?
           %br
-          .subject= p.subject
+          .subject
+            = p.subject
+            = image_tag 'television.png' unless p.video.empty?
           .body{:style=>"background-color: #{cycle('#F9E3A4','#F9A4AA','#F9A4EB','#ABA4F9','#A4ECF9','#A6F9A4')}"}
             = truncate p.body, :length=>200
           .date

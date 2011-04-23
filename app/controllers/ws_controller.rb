@@ -13,6 +13,7 @@ class WsController < ApplicationController
       :body => (doc/'body').text, :post_type => (doc/'post-type').text,
       :pic => (doc/'pic') .text, :begin_on=>(doc/'begin-on').text,
       :pic_postimg => (doc/'pic-postimg').text,
+      :video => (doc/'video').text, 
       :end_on => (doc/'end-on').text, :stick => (doc/'stick').text  
     render :text => "ok"
   end
