@@ -1,0 +1,13 @@
+<% @reply = Reply.new %>
+<table width="100%">
+  <% fields_for @reply do |f| %>
+    <tr>
+      <td class="field-name">ตอบกระทู้</td>
+      <td colspan='2'><%= f.text_area :body, :cols=>50, :rows=>6 %></td>
+    </tr>
+    <tr>
+      <td class="field-name">ภาพประกอบ</td>
+      <td colspan='2'><%= f.file_field :pic %></td>
+    </tr>
+  <% end %>
+</table>

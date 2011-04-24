@@ -1,12 +1,30 @@
 :css
+  .pic {text-align:center;}
   .subject {color:#888; font-size:24pt; font-weight:bold;}
   .date {font-size:12pt; font-style: italic; float:right; clear: both;}
 - if @notice.pic
-  = image_tag @notice.pic
+  .pic= image_tag @notice.pic
 .date
+  = @notice.user.full_name
   = date_thai @notice.created_at
 .subject
   - if (@notice.user.login!='anonymous') && (@notice.user==current_user)
-    = link_to image_tag('pencil.png', :alt => "edit" ), "/run/webboard/edit/#{@notice.id}"
+    = link_to image_tag('pencil.png', :alt => "แก้ไข" ), "/run/webboard/edit/#{@notice.id}"
+  - if admin?
+    = link_to image_tag('cross.png', :alt => "ลบ" ), "/run/webboard/rm/#{@notice.id}", :confirm=>'กรุณายืนยัน'
   = @notice.subject
 .body= RedCloth.new(@notice.body).to_html
+- @notice.replies.each do |r|
+  - next unless r.user
+  %hr
+  - if admin?
+    = link_to image_tag('cross.png', :alt => "ลบ" ), "/run/webboard/rm_reply/#{r.id}", :confirm=>'กรุณายืนยัน'
+    ลบตอบกระทู้
+  .date
+    = r.user.full_name
+    = date_thai r.created_at
+  - if r.pic
+    .pic= image_tag r.pic
+  = r.body
+%p  
+= link_to_if login?, "ตอบกลับกระทู้นี้", "/run/webboard/reply/#{@notice.id}"

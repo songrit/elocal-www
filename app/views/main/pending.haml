@@ -12,7 +12,6 @@
     - @runseq= GmaRunseq.find(xmain.current_runseq)
     - next unless @runseq
     - next unless %w(form output pdf).include?(@runseq.action)
-    /- debugger
     - next if @xmain.gma_runseqs.first==@xmain.current_runseq && @xmain.gma_user!=current_user
     - next unless authorize?
     %tr

@@ -29,7 +29,8 @@
 <icon BUILTIN="bookmark"/>
 </node>
 </node>
-<node CREATED="1303436359854" ID="ID_962055243" MODIFIED="1303436370627" TEXT="edit: &#xe41;&#xe01;&#xe49;&#xe44;&#xe02;&#xe01;&#xe23;&#xe30;&#xe17;&#xe39;&#xe49;">
+<node CREATED="1303436359854" ID="ID_962055243" MODIFIED="1303676498279" TEXT="edit: &#xe41;&#xe01;&#xe49;&#xe44;&#xe02;&#xe01;&#xe23;&#xe30;&#xe17;&#xe39;&#xe49;">
+<icon BUILTIN="closed"/>
 <node CREATED="1303436372238" ID="ID_1040938161" MODIFIED="1303513957084" TEXT="enter: &#xe41;&#xe01;&#xe49;&#xe44;&#xe02;&#xe02;&#xe49;&#xe2d;&#xe04;&#xe27;&#xe32;&#xe21;">
 <icon BUILTIN="attach"/>
 </node>
@@ -37,17 +38,27 @@
 <icon BUILTIN="bookmark"/>
 </node>
 </node>
-<node CREATED="1303436409313" ID="ID_1450579837" MODIFIED="1303436420368" TEXT="rm: &#xe25;&#xe1a;&#xe01;&#xe23;&#xe30;&#xe17;&#xe39;&#xe49;">
+<node CREATED="1303436409313" ID="ID_1450579837" MODIFIED="1303676504270" TEXT="rm: &#xe25;&#xe1a;&#xe01;&#xe23;&#xe30;&#xe17;&#xe39;&#xe49;">
+<icon BUILTIN="closed"/>
 <node CREATED="1303436420373" ID="ID_205805514" MODIFIED="1303436430703" TEXT="rm_notice">
 <icon BUILTIN="bookmark"/>
+<node CREATED="1303602806000" ID="ID_704624414" MODIFIED="1303602812596" TEXT="role: d"/>
 </node>
 </node>
-<node CREATED="1303436440021" ID="ID_1324609666" MODIFIED="1303436451072" TEXT="reply: &#xe15;&#xe2d;&#xe1a;&#xe01;&#xe23;&#xe30;&#xe17;&#xe39;&#xe49;">
+<node CREATED="1303436440021" ID="ID_1324609666" MODIFIED="1303676509526" TEXT="reply: &#xe15;&#xe2d;&#xe1a;&#xe01;&#xe23;&#xe30;&#xe17;&#xe39;&#xe49;">
+<icon BUILTIN="closed"/>
 <node CREATED="1303436451077" ID="ID_938053949" MODIFIED="1303513949946" TEXT="enter: &#xe1a;&#xe31;&#xe19;&#xe17;&#xe36;&#xe01;&#xe02;&#xe49;&#xe2d;&#xe04;&#xe27;&#xe32;&#xe21;">
 <icon BUILTIN="attach"/>
 </node>
 <node CREATED="1303436454118" ID="ID_267296717" MODIFIED="1303436461384" TEXT="create_reply">
 <icon BUILTIN="bookmark"/>
+</node>
+</node>
+<node CREATED="1303602821980" ID="ID_292380116" MODIFIED="1303676515324" TEXT="rm_reply: &#xe25;&#xe1a;&#xe15;&#xe2d;&#xe1a;&#xe01;&#xe23;&#xe30;&#xe17;&#xe39;&#xe49;">
+<icon BUILTIN="closed"/>
+<node CREATED="1303602834081" ID="ID_1795305859" MODIFIED="1303676487261" TEXT="rm_reply">
+<icon BUILTIN="bookmark"/>
+<node CREATED="1303602838616" ID="ID_1305756101" MODIFIED="1303602841371" TEXT="role: d"/>
 </node>
 </node>
 </node>
