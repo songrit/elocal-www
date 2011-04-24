@@ -2,9 +2,12 @@
 <!-- To view this file, download free mind mapping software FreeMind from http://freemind.sourceforge.net -->
 <node CREATED="1273819432637" ID="ID_1098419600" MODIFIED="1301903314905" TEXT="elocal-www">
 <node CREATED="1273819462973" ID="ID_282419531" MODIFIED="1298456465253" POSITION="right" TEXT="services">
-<node CREATED="1301891097947" FOLDED="true" ID="ID_761518074" MODIFIED="1303511893553" TEXT="about: &#xe02;&#xe49;&#xe2d;&#xe21;&#xe39;&#xe25;&#xe17;&#xe31;&#xe48;&#xe27;&#xe44;&#xe1b;">
+<node CREATED="1301891097947" ID="ID_761518074" MODIFIED="1303678212870" TEXT="about: &#xe02;&#xe49;&#xe2d;&#xe21;&#xe39;&#xe25;&#xe17;&#xe31;&#xe48;&#xe27;&#xe44;&#xe1b;">
 <node CREATED="1301891109805" ID="ID_1520884593" MODIFIED="1302016119176" TEXT="link: &#xe1b;&#xe23;&#xe30;&#xe27;&#xe31;&#xe15;&#xe34;&#xe04;&#xe27;&#xe32;&#xe21;&#xe40;&#xe1b;&#xe47;&#xe19;&#xe21;&#xe32;: /about"/>
 <node CREATED="1301991877388" ID="ID_1061542823" MODIFIED="1301991901325" TEXT="link: &#xe1a;&#xe38;&#xe04;&#xe25;&#xe32;&#xe01;&#xe23;: /about/executives"/>
+<node CREATED="1303678215401" ID="ID_1722853139" MODIFIED="1303678263727" TEXT="link: &#xe41;&#xe1c;&#xe19;&#xe22;&#xe38;&#xe17;&#xe18;&#xe28;&#xe32;&#xe2a;&#xe15;&#xe23;&#xe4c; 51-55: /strategy_plan51-55.pdf"/>
+<node CREATED="1303678886018" ID="ID_556172169" MODIFIED="1303680284131" TEXT="link: &#xe01;&#xe0f;&#xe2b;&#xe21;&#xe32;&#xe22;: /about/laws"/>
+<node CREATED="1303680285029" ID="ID_295618017" MODIFIED="1303680295277" TEXT="link: &#xe40;&#xe27;&#xe47;&#xe1a;&#xe44;&#xe0b;&#xe15;&#xe4c;&#xe17;&#xe35;&#xe48;&#xe40;&#xe01;&#xe35;&#xe48;&#xe22;&#xe27;&#xe02;&#xe49;&#xe2d;&#xe07;: /about/links"/>
 <node CREATED="1301998435215" ID="ID_1811221797" MODIFIED="1301998445646" TEXT="link: &#xe15;&#xe34;&#xe14;&#xe15;&#xe48;&#xe2d;&#xe40;&#xe23;&#xe32;: /about/contact"/>
 </node>
 <node CREATED="1301894828778" FOLDED="true" ID="ID_1136218227" MODIFIED="1303511889785" TEXT="activity: &#xe02;&#xe48;&#xe32;&#xe27;/&#xe01;&#xe34;&#xe08;&#xe01;&#xe23;&#xe23;&#xe21;">
